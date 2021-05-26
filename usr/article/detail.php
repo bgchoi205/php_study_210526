@@ -85,14 +85,18 @@ while( $reply = mysqli_fetch_assoc($rsReply) ){
   
   </form>
 
-  <hr>
+  
   <h2>댓글 목록</h2>
+  <hr>
 
   <?php foreach($replies as $reply) {?>
     
     번호 : <?=$reply['id']?> &emsp; &emsp;
-    등록일 : <?=$reply['regDate']?><br>
-    내용 : <?=$reply['body']?><br>
+    등록일 : <?=$reply['regDate']?> &emsp; &emsp;
+    <a onclick="if (confirm('정말 삭제하시겠습니까?') == false) return false; " href="../reply/doDelete.php?id=<?=$reply['id']?>">삭제</a>
+    <br>
+    <br>
+    <?=$reply['body']?><br>
     <hr>
   <?php }?>
 
