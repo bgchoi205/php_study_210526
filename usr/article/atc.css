@@ -1,0 +1,11 @@
+textarea{
+  width:500px;
+  height: 100px;
+  resize: none;
+}
+
+.replySubmitBottonBox{
+  padding-left: 430px;
+  padding-top: 10px;
+}
+

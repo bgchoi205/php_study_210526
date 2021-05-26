@@ -7,6 +7,8 @@ FROM article AS A
 ORDER BY A.id DESC
 ";
 
+
+
 $rs = mysqli_query($dbConn, $sql);
 
 $articles = [];
